@@ -45,6 +45,8 @@ textarea {
   --NAV-BGCOLOR: #fff;
   --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
   --HERO-COLOR: #fff;
+  --BUTTON-BGCOLOR: var(--HIGHLIGHT-COLOR);
+  --BUTTON-COLOR: var(--HEADER-COLOR);
   
 
   /* BORDERS */
@@ -56,6 +58,27 @@ textarea {
   
   /* STANDARD MARGIN */
   --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --BGCOLOR: #000;
+  --BGCOLOR-FADE: gray;
+  --BODY-BGCOLOR: #333;
+  --FONT-COLOR: whitesmoke;
+  --HIGHLIGHT-COLOR: whitesmoke;
+  --LINK-COLOR: whitesmoke;
+  --LINK-HOVER: orange;
+  --LINK-ACTIVE: rgb(252, 220, 160);
+  --HEADER-BGCOLOR: #000;
+  --HEADER-COLOR: whitesmoke;
+  --NAV-BGCOLOR: rgb(20, 20, 20);
+  --HERO-BGCOLOR: rgb(20, 20, 20);
+  --HERO-COLOR: white;
+  --BORDER-COLOR: whitesmoke;
+  --BUTTON-BGCOLOR: #000;
+  --BUTTON-COLOR: white;
+}
 }
 
 /* UTILITY CLASS */
@@ -250,8 +273,8 @@ a:active {
 .contact__button {
   padding: 0.5em;
   font-weight: bold;
-  background-color: var(--HIGHLIGHT-COLOR);
-  color: var(--HEADER-COLOR);
+  background-color: var(--BUTTON-BGCOLOR);
+  color: var(--BUTTON-COLOR);
   text-shadow: 2px 2px 5px var(--BORDER-COLOR);
   border-radius: 5px;
 }
